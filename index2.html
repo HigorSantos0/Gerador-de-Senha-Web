@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Conteudo</title>
+</head>
+
+<body>
+
+    <aside>
+        <div class="bot">
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html">Início</a></li>
+                <li><a href="http://127.0.0.1:5500/index2.html">Conteudo</a></li>
+                <li><a href="http://127.0.0.1:5500/index3.html">Contato</a></li>
+                
+            </ul>
+        </nav>
+
+    </aside>
+    
+    <img class="logo4" src="./img/Gerador-removebg-preview.png">
+    
+
+    <main class="conteudo">
+        <span> Tamanho <span id="valor"></span> Caracteres </span>
+        <input id="slide" class="slide" type="range" min="5" max="20" value="10"/>
+
+        <button id="button" class="botao" onclick="generatePassword()">Gerar Senha</button>
+    </main>
+
+    <div id="conteudo-senha" class="conteudo-senha hide" onclick="copyPassword()">
+        <span class="titulo">Senha Gerada:</span>
+        <span id="senha" class="senha"> </span>
+        <span class="tipo">Copiar Senha</span>
+        
+    </div>
+
+    <script src="./js/index2.js "></script>
+</body>
+
+</html>
