@@ -1,0 +1,199 @@
+* {
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+aside {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background: linear-gradient(120deg, #ffffff, #031fbb);
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+} 
+aside.active {
+    right: 0px;
+}
+aside .bot {
+    position: absolute;
+    width: 40px;
+    height: 22px;
+    left: -70px;
+    top: 20px;
+    
+}
+aside .bot.active {
+
+    left: 30px;
+}
+.bot span {
+    position: absolute;
+    background: rgb(119, 119, 119);
+    width: 100%;
+    height: 2px;
+}
+.bot span:nth-child(1){
+
+    top: 0;
+}
+.bot span:nth-child(2){
+    top: 11px;
+}
+.bot span:nth-child(3){
+    top: 22px;
+}
+.bot.active span:nth-child(1){
+
+    transform: rotate(45deg);
+    top: 11px;
+
+}
+.bot.active span:nth-child(2){
+    
+    opacity: 0;
+}
+.bot.active span:nth-child(3){
+
+    transform: rotate(-45deg);
+    top: 11px;
+}
+
+aside nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+nav ul {
+    text-align: center;
+    list-style: none;
+
+}
+nav ul li {
+    margin: 10px;
+    padding: 5px;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a:hover:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #0c30ff;
+    bottom: -3px;
+}
+body {
+    background: linear-gradient(120deg, #0c30ff, #110f0f);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.logo4 {
+    max-width: 300px;
+    margin: 25px;
+    height: -100;
+
+}
+.conteudo {
+    max-width: 400px;
+    margin: 12px 0;
+}
+.conteudo span {
+    color: #fff;
+    font-size: 20px;
+}
+.slide {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background: #dadada;
+    height: 17px;
+    outline: none;
+    margin-top: 7px;
+}
+.botao {
+    height: 40px;
+    background: linear-gradient(120deg, #0c30ff, #000000, #0c30ff);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    border: unset;
+    cursor: pointer;
+    transition: 0.5s ease;
+    outline: none;
+    background-size: 200%;
+
+}
+.botao:hover {
+    background-position: right;
+}
+.conteudo-senha {
+
+    max-width: 400px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.titulo {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+.senha {
+    height: 55px;
+    background-color: rgba(59, 59, 59, 0.33);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border: 1px solid #707070;
+    transition: transform 0.5s;
+}
+.senha:hover {
+    transform: scale(1.02);
+}
+.tipo {
+    color: #ffffff;
+    position: relative;
+    top: 20px;
+    padding: 5px 7px;
+    background: rgb(32, 32, 32);
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.hide {
+    display: none;
+}
+.conteudo-senha:hover .tipo {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
